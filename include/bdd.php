@@ -8,7 +8,7 @@
 	}
 	
 	//$domain = 'http://192.168.1.24/pompier'; 
-	$domain = 'http://localhost'; 											// nom de domaine (dépand de la ou sont les fichiers)
+	$domain = 'http://localhost/pompier'; 											// nom de domaine (dépand de la ou sont les fichiers)
 	
 	//ini_set("display_errors",0);error_reporting(0);
 ?>
