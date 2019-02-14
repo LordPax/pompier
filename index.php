@@ -17,8 +17,8 @@
 					$coInfo = $co->fetch();
 					session_start();
 					$_SESSION['id'] = $coInfo['idUser'];
-					//header('location:'.$domain.'/acceuil/');
-					$msgOk = 'cool t\'es connecter';
+					header('location:'.$domain.'/acceuil/'.$_SESSION['id']);
+					//$msgOk = 'msg test : cool t\'es connecter';
 				}
 				else {
 					$msgErr = 'L\'email ou le mot de passe sont incorrecte ';
