@@ -1,0 +1,73 @@
+body{
+	margin : 0;
+	font-family : 'Source Sans Pro', sans-serif;
+	background-color : #EFEFEF;
+	font-weight : 300;
+	font-size : 19px;
+	color : #1F1F1F;
+}
+.champ{
+	margin-top : 3px; 
+	background-color : #EFEFEF;
+	border-top : 0;
+	border-left : 0;
+	border-right : 0;
+	border-bottom : 3px solid #3498DB;
+	padding : 10px;
+	color : #1F1F1F;
+	font-family : 'Source Sans Pro', sans-serif;
+	width : 300px;
+}
+.bouton{
+	margin-top : 10px;
+	background-color : #FFF;
+	border : 1px solid #3498DB;
+	padding : 7px;
+	color : #3498DB;
+	border-radius : 5px;
+	font-size : 20px;
+	font-family : 'Source Sans Pro', sans-serif;
+}
+.bouton:hover{
+	background-color : #3498DB;
+	color : #FFF;
+	transition : 250ms;
+}
+.connexion{
+	width : 350px;
+	text-align : center;
+	margin-top : 200px;
+	margin-left : auto;
+	margin-right : auto;
+}
+.msgErr{
+	background-color : #FFF;
+	color : #FF8F8F;
+	font-weight : 400;
+	border : 1px solid #FF8F8F;
+	padding : 10px;
+	margin-top : 5px;
+	border-radius : 5px;
+}
+.msgOk{
+	background-color : #FFF;
+	color : #3CD21A;
+	border : 1px solid #3CD21A;
+	font-weight : 400;
+	padding : 10px;
+	margin-top : 5px;
+	border-radius : 5px;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(../police/source_sans_pro_300.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Source Sans Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(../police/source_sans_pro_400.ttf) format('truetype');
+}
