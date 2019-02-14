@@ -1,0 +1,32 @@
+git config --global user.name "nom"
+git config --global user.name "email"
+
+git init
+git clone <lien>
+
+git add <fichier>
+git add --all *
+
+git commit [-m "descrip"]
+git commit -a [-m "descrip"]
+
+git log
+git status
+git diff <commit1> <commit2>
+
+git pull
+git push origin master
+
+git reset -hard HEAD
+git reset -hard HEAD^
+git revert <commit>
+
+git remote add origin <addr du git>
+
+------------------------------------------------------------------------------------------
+
+git branch
+git branch <nom>
+
+git checkout <nom>
+
