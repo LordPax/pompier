@@ -26,10 +26,46 @@
 					<div class = "princip">
 						<div class = "flex">
 							<div class = "fen spe">
-								lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
+								<table class = "tab_info">
+									<tr>
+										<th class = "ligne_tab_info">de</th>
+										<th class = "ligne_tab_info">a</th>
+										<th class = "ligne_tab_info">dispo</th>
+									</tr>
+									<tr>
+										<?php
+											$remp = $bdd->query('SELECT * FROM remplacement');
+											while ($infoRemp = $remp->fetch()) {
+												echo '
+													<td class = "ligne_tab_info">'.substr($infoRemp['de'], 5, 11).'</td>
+													<td class = "ligne_tab_info">'.substr($infoRemp['a'], 5, 11).'</td>
+													<td class = "ligne_tab_info">'.$infoRemp['dispo'].'</td>
+												';
+											}
+										?>
+									</tr>
+								</table>
 							</div>
 							<div class = "fen spe">
-								lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
+								<table class = "tab_info">
+									<tr>
+										<th class = "ligne_tab_info">de</th>
+										<th class = "ligne_tab_info">a</th>
+										<th class = "ligne_tab_info">dispo</th>
+									</tr>
+									<tr>
+										<?php
+											$inter = $bdd->query('SELECT * FROM intervention');
+											while ($infoInter = $inter->fetch()) {
+												echo '
+													<td class = "ligne_tab_info">'.substr($infoInter['quand'], 5, 11).'</td>
+													<td class = "ligne_tab_info">'.$infoInter['motif'].'</td>
+													<td class = "ligne_tab_info">'.$infoInter['dispo'].'</td>
+												';
+											}
+										?>
+									</tr>
+								</table>
 							</div>
 						</div>
 					</div>
