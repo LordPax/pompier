@@ -10,13 +10,17 @@
 <!DOCTYPE html>
 <html lang = "fr">
 	<head>
+		<!-- définit le titre de la page -->
 		<title>accueil</title>
+		<!-- permet l'utilisation des accents dans la page -->
 		<meta charset = "utf-8">
+		<!-- permet d'avoir des accents dans la page -->
 		<link rel = "stylesheet" type = "text/css" href = "../include/design.css">
 		<meta name = "viewport" content = "width=divice-width, initial-scale=1.0">
 	</head>
 	<body>
-		<?php include('../include/header.php');?>
+		<!-- utilisation d'une autre page pour afficher le titre de la page -->
+		<?php include('../include/header.php');?>																		                   
 		<section>
 			<div class = "dimension">
 				<!--<div class = "actu">
@@ -30,7 +34,7 @@
 									<tr>
 										<th class = "ligne_tab_info">de</th>
 										<th class = "ligne_tab_info">a</th>
-										<th class = "ligne_tab_info">dispo</th>
+										<th class = "ligne_tab_info">Disponible ? </th>
 									</tr>
 									<tr>
 										<?php
@@ -50,8 +54,8 @@
 								<table class = "tab_info">
 									<tr>
 										<th class = "ligne_tab_info">de</th>
-										<th class = "ligne_tab_info">a</th>
-										<th class = "ligne_tab_info">dispo</th>
+										<th class = "ligne_tab_info">à</th>
+										<th class = "ligne_tab_info">Disponible ? </th>
 									</tr>
 									<tr>
 										<?php
@@ -73,15 +77,29 @@
 						<center> <b>Communication :</b> </center>
 						<div class = "fen">
 							<b>Chef de centre: </b><br>
-							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
+							<p class="incline">information à récupérer depuis la base de donnée</p>
+							
 						</div>
 						<div class = "fen">
 							<b>Chef de section 1: </b><br>
-							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
+							<p class="incline">information à récupérer depuis la base de donnée</p>
+						</div>
+						<div class = "fen">
+							<b>Chef de section 2: </b><br>
+							<p class="incline">information à récupérer depuis la base de donnée</p>
+						</div>
+						<div class = "fen">
+							<b>Chef de section 3: </b><br>
+							<p class="incline">information à récupérer depuis la base de donnée</p>
+						</div>
+						<div class = "fen">
+							<b>Chef de section 4: </b><br>
+							<p class="incline">information à récupérer depuis la base de donnée</p>
 						</div>
 						<div class = "fen">
 							<b>Section sportive : </b><br>
-							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
+							<p class="incline">information à récupérer depuis la base de donnée</p>
+							
 						</div>
 					</div>
 				</div>
