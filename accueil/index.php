@@ -70,13 +70,17 @@
 						</div>
 					</div>
 					<div class = "second">
+						<center> <b>Communication :</b> </center>
 						<div class = "fen">
+							<b>Chef de centre: </b><br>
 							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
 						</div>
 						<div class = "fen">
+							<b>Chef de section 1: </b><br>
 							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
 						</div>
 						<div class = "fen">
+							<b>Section sportive : </b><br>
 							lollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollollol
 						</div>
 					</div>
