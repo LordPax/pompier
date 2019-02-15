@@ -34,13 +34,13 @@
 									</tr>
 									<tr>
 										<?php
-											$remp = $bdd->query('SELECT * FROM remplacement');
-											while ($infoRemp = $remp->fetch()) {
+											$remp = $bdd->query('SELECT * FROM remplacement'); 								// recherche tout les tuples (lignes) remplacements
+											while ($infoRemp = $remp->fetch()) { 											// enregistre dans un tableau les tuples recherché
 												echo '
-													<td class = "ligne_tab_info">'.substr($infoRemp['de'], 5, 11).'</td>
+													<td class = "ligne_tab_info">'.substr($infoRemp['de'], 5, 11).'</td> 
 													<td class = "ligne_tab_info">'.substr($infoRemp['a'], 5, 11).'</td>
 													<td class = "ligne_tab_info">'.$infoRemp['dispo'].'</td>
-												';
+												'; 																			// affiche les attributs (colonnes) de chaque tuples dans des balises html
 											}
 										?>
 									</tr>
