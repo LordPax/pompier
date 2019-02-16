@@ -36,7 +36,7 @@
 										<tr>
 											<th class = "ligne_tab_info couleur_tab_ligne">de</th>
 											<th class = "ligne_tab_info couleur_tab_ligne">a</th>
-											<th class = "ligne_tab_info couleur_tab_ligne">dispo</th>
+											<th class = "ligne_tab_info couleur_tab_ligne">disponible?</th>
 										</tr>
 											<?php
 												$remp = $bdd->query('SELECT * FROM remplacement'); 								// recherche tout les tuples (lignes) remplacements
@@ -60,7 +60,7 @@
 										<tr>
 											<th class = "ligne_tab_info couleur_tab_ligne">de</th>
 											<th class = "ligne_tab_info couleur_tab_ligne">motif</th>
-											<th class = "ligne_tab_info couleur_tab_ligne">dispo</th>
+											<th class = "ligne_tab_info couleur_tab_ligne">disponible?</th>
 										</tr>
 										<tr>
 											<?php
