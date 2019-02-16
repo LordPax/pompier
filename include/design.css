@@ -7,16 +7,23 @@ body{
 	color : #1F1F1F;
 }
 header{
-	padding : 10px;
 	background-color : #3498DB;
 	color : #FFF;
 	font-size : 25px;
 	font-weight : 400;
+	border-bottom : 3px solid #3498DB;
 }
 th{
 	font-family : 'Source Sans Pro', sans-serif;
 	font-weight : 400;
 	color : #1F1F1F;
+}
+h1{
+	margin : 0;
+	padding : 10px;
+	font-size : 25px;
+	font-weight : 400;
+	display : inline-block;
 }
 .champ{ /* pour tout les champs de texte */
 	margin-top : 3px; 
@@ -120,6 +127,49 @@ th{
 }
 .couleur_tab_ligne{
 	background-color : #EFEFEF;
+}
+.menu{
+	float : right;
+	font-size : 20px;
+}
+.menu_onglet{
+	margin-left : 5px;
+	padding : 13px;
+	border-bottom : 3px solid #3498DB;
+	display : inline-block;
+	text-decoration : none;
+	color : #FFF;
+}
+.menu_onglet:hover{
+	border-bottom : 3px solid #FFF;
+	transition : 150ms;
+}
+.menu_use{
+	border-bottom : 3px solid #FFF;
+}
+.menu_bouton{
+	width : 15px;
+}
+.menu_deroulant{
+	position : absolute;
+	margin-left : 890px;
+	margin-top : 5px;
+	background-color : #FFF;
+	border-radius : 5px;
+	word-break : break-all;
+	width : 200px;
+	border : 1px solid #3498DB;
+}
+.menu_deroulant_onglet{
+	padding : 5px;
+	color : #1F1F1F;
+	text-decoration : none;
+	display : block;
+}
+.menu_deroulant_onglet:hover{
+	color : #FFF;
+	background-color : #3498DB;
+	transition : 150ms;
 }
 
 @font-face { /* paramètrage de la police d'écriture (weight 300) */

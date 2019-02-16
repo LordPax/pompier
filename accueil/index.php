@@ -17,6 +17,8 @@
 		<!-- permet d'avoir des accents dans la page -->
 		<link rel = "stylesheet" type = "text/css" href = "../include/design.css">
 		<meta name = "viewport" content = "width=divice-width, initial-scale=1.0">
+		<script type = "text/javascript" src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script type = "text/javascript" src = "../include/code.js"></script>
 	</head>
 	<body>
 		<!-- utilisation d'une autre page pour afficher le titre de la page -->
