@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 15, 2019 at 09:19 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 5.6.38
+-- Hôte : localhost
+-- Généré le :  sam. 16 fév. 2019 à 03:08
+-- Version du serveur :  10.1.36-MariaDB
+-- Version de PHP :  5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pompier`
+-- Base de données :  `pompier`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `intervention`
+-- Structure de la table `intervention`
 --
 
 CREATE TABLE `intervention` (
@@ -36,7 +36,7 @@ CREATE TABLE `intervention` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `intervention`
+-- Déchargement des données de la table `intervention`
 --
 
 INSERT INTO `intervention` (`idInter`, `quand`, `motif`, `dispo`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `intervention` (`idInter`, `quand`, `motif`, `dispo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `remplacement`
+-- Structure de la table `remplacement`
 --
 
 CREATE TABLE `remplacement` (
@@ -56,16 +56,18 @@ CREATE TABLE `remplacement` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `remplacement`
+-- Déchargement des données de la table `remplacement`
 --
 
 INSERT INTO `remplacement` (`idRemp`, `de`, `a`, `dispo`) VALUES
-(1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1);
+(1, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(2, '2019-02-20 00:00:00', '2019-02-28 07:36:08', 1),
+(3, '2019-02-03 08:06:31', '2019-02-27 17:32:14', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
+-- Structure de la table `role`
 --
 
 CREATE TABLE `role` (
@@ -74,7 +76,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `role`
+-- Déchargement des données de la table `role`
 --
 
 INSERT INTO `role` (`idRole`, `role`) VALUES
@@ -83,7 +85,7 @@ INSERT INTO `role` (`idRole`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE `user` (
@@ -101,64 +103,64 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `numPhone`, `mdp`, `email`, `naissance`, `dispo`) VALUES
 (1, 'étoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a ', 'patrick.star@gmail.com', '1990-02-13', 1);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `intervention`
+-- Index pour la table `intervention`
 --
 ALTER TABLE `intervention`
   ADD PRIMARY KEY (`idInter`);
 
 --
--- Indexes for table `remplacement`
+-- Index pour la table `remplacement`
 --
 ALTER TABLE `remplacement`
   ADD PRIMARY KEY (`idRemp`);
 
 --
--- Indexes for table `role`
+-- Index pour la table `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`idRole`);
 
 --
--- Indexes for table `user`
+-- Index pour la table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`idUser`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `intervention`
+-- AUTO_INCREMENT pour la table `intervention`
 --
 ALTER TABLE `intervention`
   MODIFY `idInter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `remplacement`
+-- AUTO_INCREMENT pour la table `remplacement`
 --
 ALTER TABLE `remplacement`
-  MODIFY `idRemp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idRemp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `role`
+-- AUTO_INCREMENT pour la table `role`
 --
 ALTER TABLE `role`
   MODIFY `idRole` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
   MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

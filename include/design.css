@@ -13,6 +13,11 @@ header{
 	font-size : 25px;
 	font-weight : 400;
 }
+th{
+	font-family : 'Source Sans Pro', sans-serif;
+	font-weight : 400;
+	color : #1F1F1F;
+}
 .champ{ /* pour tout les champs de texte */
 	margin-top : 3px; 
 	background-color : #EFEFEF;
