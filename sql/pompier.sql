@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  sam. 16 fév. 2019 à 03:08
--- Version du serveur :  10.1.36-MariaDB
--- Version de PHP :  5.6.38
+-- Généré le :  Dim 17 fév. 2019 à 19:16
+-- Version du serveur :  10.1.28-MariaDB
+-- Version de PHP :  7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -72,7 +72,7 @@ INSERT INTO `remplacement` (`idRemp`, `de`, `a`, `dispo`) VALUES
 
 CREATE TABLE `role` (
   `idRole` int(11) NOT NULL,
-  `role` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `role` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -80,7 +80,14 @@ CREATE TABLE `role` (
 --
 
 INSERT INTO `role` (`idRole`, `role`) VALUES
-(1, 'chef de centre');
+(1, 'Chef de centre'),
+(2, 'Chef de centre adjoint'),
+(3, 'Administrateur'),
+(4, 'Chef de section'),
+(5, 'Responsable matériel'),
+(6, 'responsable véhicule'),
+(7, 'responsable habillement'),
+(8, 'responsable sport');
 
 -- --------------------------------------------------------
 
@@ -107,23 +114,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `numPhone`, `mdp`, `email`, `naissance`, `dispo`) VALUES
-(1, 'étoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a ', 'patrick.star@gmail.com', '1990-02-13', 1);
+(1, 'étoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a', 'patrick.star@gmail.com', '1990-02-13', 1);
 
 --
 -- Index pour les tables déchargées
 --
-
---
--- Index pour la table `intervention`
---
-ALTER TABLE `intervention`
-  ADD PRIMARY KEY (`idInter`);
-
---
--- Index pour la table `remplacement`
---
-ALTER TABLE `remplacement`
-  ADD PRIMARY KEY (`idRemp`);
 
 --
 -- Index pour la table `role`
@@ -142,22 +137,10 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT pour la table `intervention`
---
-ALTER TABLE `intervention`
-  MODIFY `idInter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `remplacement`
---
-ALTER TABLE `remplacement`
-  MODIFY `idRemp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
 -- AUTO_INCREMENT pour la table `role`
 --
 ALTER TABLE `role`
-  MODIFY `idRole` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idRole` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `user`
