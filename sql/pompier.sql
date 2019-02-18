@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  Dim 17 fév. 2019 à 19:16
+-- Généré le :  lun. 18 fév. 2019 à 21:55
 -- Version du serveur :  10.1.28-MariaDB
 -- Version de PHP :  7.1.10
 
@@ -106,15 +106,16 @@ CREATE TABLE `user` (
   `mdp` text NOT NULL,
   `email` text NOT NULL,
   `naissance` date NOT NULL,
-  `dispo` int(11) NOT NULL
+  `dispo` int(11) NOT NULL,
+  `section` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `numPhone`, `mdp`, `email`, `naissance`, `dispo`) VALUES
-(1, 'étoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a', 'patrick.star@gmail.com', '1990-02-13', 1);
+INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `numPhone`, `mdp`, `email`, `naissance`, `dispo`, `section`) VALUES
+(1, 'etoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a', 'patrick.star@gmail.com', '1990-02-13', 1, 0);
 
 --
 -- Index pour les tables déchargées

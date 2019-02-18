@@ -2,14 +2,21 @@
 	<div class = "dimension">
 		<h1>Pompier</h1>
 		<div class = "menu">
-			<a href = "" class = "menu_onglet menu_use">Accueil</a>
 			<?php
 				$droit = $bdd->prepare('SELECT role FROM user WHERE idUser = ?'); 	// on cherche le role de la personne
 				$droit->execute(array($_SESSION['id']));
 				$role = $droit->fetch();
 
+				if (explode('/', $_SERVER['REQUEST_URI'])[2] == 'accueil') // si on se trouve dans le fichier accueil
+					echo '<a href = "'.$domain.'/accueil/'.$_SESSION['id'].'" class = "menu_onglet menu_use">Accueil</a>';
+				else
+					echo '<a href = "'.$domain.'/accueil/'.$_SESSION['id'].'" class = "menu_onglet">Accueil</a>';
+
 				if (in_array($role['role'], [1, 2, 3, 4])) 							// s'affiche pour : chef de centre, chef de centre adjoint, admin, chef de section
-					echo '<a href = "" class = "menu_onglet">Personnel</a>';
+					if (explode('/', $_SERVER['REQUEST_URI'])[2] == 'personnel') // si on se trouve dans le fichier personnel
+						echo '<a href = "'.$domain.'/personnel/'.$_SESSION['id'].'" class = "menu_onglet menu_use">Personnel</a>';
+					else
+						echo '<a href = "'.$domain.'/personnel/'.$_SESSION['id'].'" class = "menu_onglet">Personnel</a>';
 
 				if (in_array($role['role'], [1, 2, 3, 4, 8]))						// s'affiche pour : chef de centre, chef de centre adjoint, admin, chef de section, responsable sport 
 					echo '<a href = "" class = "menu_onglet">Affichage</a>';
