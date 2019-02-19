@@ -37,9 +37,12 @@
 					echo '<img class = "menu_bouton" src = "../images/fleche.png">';
 				}
 				else {
+					if (explode('/', $_SERVER['REQUEST_URI'])[2] == 'personnel')
+						echo '<a href = "'.$domain.'/personnel/'.$_SESSION['id'].'" class = "menu_onglet menu_use">Vérification</a>';
+					else
+						echo '<a href = "'.$domain.'/personnel/'.$_SESSION['id'].'" class = "menu_onglet">Vérification</a>';
 					echo '
 						<a href = "" class = "menu_onglet">Stratus</a>
-						<a href = "" class = "menu_onglet">Vérification</a>
 						<a href = "" class = "menu_onglet">Remplacement</a>
 					';
 				}
@@ -52,8 +55,8 @@
 		echo '
 			<div class = "dimension">
 				<div class = "menu_deroulant">
+					<a href = "'.$domain.'/verif/'.$_SESSION['id'].'" class = "menu_deroulant_onglet">Vérification</a>
 					<a href = "" class = "menu_deroulant_onglet">Stratus</a>
-					<a href = "" class = "menu_deroulant_onglet">Vérification</a>
 					<a href = "" class = "menu_deroulant_onglet">Remplacement</a>
 				</div>
 			</div>

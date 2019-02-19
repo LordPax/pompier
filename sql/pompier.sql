@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `intervention`
 --
 
-CREATE TABLE `intervention` (
+CREATE OR REPLACE TABLE `intervention` (
   `idInter` int(11) NOT NULL,
   `quand` datetime NOT NULL,
   `motif` text NOT NULL,
@@ -48,7 +48,7 @@ INSERT INTO `intervention` (`idInter`, `quand`, `motif`, `dispo`) VALUES
 -- Structure de la table `remplacement`
 --
 
-CREATE TABLE `remplacement` (
+CREATE OR REPLACE TABLE `remplacement` (
   `idRemp` int(11) NOT NULL,
   `de` datetime NOT NULL,
   `a` datetime NOT NULL,
@@ -70,7 +70,7 @@ INSERT INTO `remplacement` (`idRemp`, `de`, `a`, `dispo`) VALUES
 -- Structure de la table `role`
 --
 
-CREATE TABLE `role` (
+CREATE OR REPLACE TABLE `role` (
   `idRole` int(11) NOT NULL,
   `role` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -95,7 +95,7 @@ INSERT INTO `role` (`idRole`, `role`) VALUES
 -- Structure de la table `user`
 --
 
-CREATE TABLE `user` (
+CREATE OR REPLACE TABLE `user` (
   `idUser` int(11) NOT NULL,
   `nom` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `prenom` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -118,6 +118,25 @@ INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `nu
 (1, 'etoiledemer', 'patrick', 1, '2ZE2RT1Z', 1, 123456789, 'df6b9fb15cfdbb7527be5a8a6e39f39e572c8ddb943fbc79a943438e9d3d85ebfc2ccf9e0eccd9346026c0b6876e0e01556fe56f135582c05fbdbb505d46755a', 'patrick.star@gmail.com', '1990-02-13', 1, 0);
 
 --
+-- Structure de la table `verif`
+--
+
+CREATE OR REPLACE TABLE `verif` (
+  `idVerif` int(11) NOT NULL,
+  `dateVerif` datetime NOT NULL,
+  `equipeDeGarde` int(11) NOT NULL,
+  `perosnnel1` int(11) NOT NULL,
+  `personnel2` int(11) NOT NULL,
+  `verifier` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `verif`
+--
+
+
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -134,6 +153,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`idUser`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `verif`
+  ADD PRIMARY KEY (`idVerif`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -148,6 +173,14 @@ ALTER TABLE `role`
 --
 ALTER TABLE `user`
   MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `verif`
+--
+
+ALTER TABLE `verif`
+  MODIFY `idVerif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
