@@ -28,7 +28,13 @@
 				<div class = "fen">
 					<div class = "fen_titre">Vérification</div>
 					<div style = "padding : 10px;">
-						lol
+						<div class = "verif_mat"></div>
+						<input type = "hidden" class = "idUser" value = <?php echo '"'.$_SESSION['id'].'"'?>>
+						<input type = "hidden" class = "idVehicule" value = "1">
+						<button id = "verif_btn" class = "bouton2">Valider</button>
+						<!--<form id = "verif_btn">
+							<input type="submit" name="btn" class = "bouton2" value = "Valider">
+						</form>-->
 					</div>
 				</div>
 			</div>

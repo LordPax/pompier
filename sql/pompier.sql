@@ -123,6 +123,7 @@ INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `nu
 
 CREATE OR REPLACE TABLE `verif` (
   `idVerif` int(11) NOT NULL,
+  `materiel` int(11) NOT NULL,
   `dateVerif` datetime NOT NULL,
   `equipeDeGarde` int(11) NOT NULL,
   `perosnnel1` int(11) NOT NULL,
@@ -135,14 +136,53 @@ CREATE OR REPLACE TABLE `verif` (
 --
 
 
+--
+-- Structure de la table `vehicule`
+--
+
+CREATE OR REPLACE TABLE `vehicule` (
+  `idVehicule` int(11) NOT NULL,
+  `vehicule` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `localisation` text NOT NULL,
+  `qte` int(11) NOT NULL,
+  `descrip` text NOT NULL,
+  `nom` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `vehicule`
+--
+
+/*INSERT INTO `vehicule` (`idVehicule`, `vehicule`, `localisation`, `qte`, `descrip`, `nom`) VALUES
+(1, `lolololol`, `quelque part`, 5, 'super beau camion rouge', 'a'),
+(2, `aze`, `azeaz`, 5, 'azeaze', 'a'),
+(3, `azrtye`, `azeartz`, 5, 'azertyaze', 'a'),
+(4, `asdfe`, `azesdfaz`, 5, 'azesdfaze', 'a');*/
+
 
 --
 -- Index pour les tables déchargées
 --
 
 --
+-- Index pour la table `intervention`
+--
+
+ALTER TABLE `intervention`
+  ADD PRIMARY KEY (`idInter`);
+
+--
+-- Index pour la table `remplacement`
+--
+
+ALTER TABLE `remplacement`
+  ADD PRIMARY KEY (`idRemp`);
+
+--
 -- Index pour la table `role`
 --
+
+
 ALTER TABLE `role`
   ADD PRIMARY KEY (`idRole`);
 
@@ -159,8 +199,26 @@ ALTER TABLE `verif`
   ADD PRIMARY KEY (`idVerif`);
 
 --
+-- Index pour la table `user`
+--
+ALTER TABLE `vehicule`
+  ADD PRIMARY KEY (`idVehicule`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
+
+--
+-- AUTO_INCREMENT pour la table `intervention`
+--
+ALTER TABLE `intervention`
+  MODIFY `idInter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT pour la table `remplacement`
+--
+ALTER TABLE `remplacement`
+  MODIFY `idRemp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `role`
@@ -180,6 +238,13 @@ ALTER TABLE `user`
 
 ALTER TABLE `verif`
   MODIFY `idVerif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+--
+-- AUTO_INCREMENT pour la table `materiel`
+--
+
+ALTER TABLE `vehicule`
+  MODIFY `idVehicule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 COMMIT;
 
