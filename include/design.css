@@ -37,6 +37,9 @@ h1{
 	font-family : 'Source Sans Pro', sans-serif;
 	width : 300px;
 }
+.champ2{
+	background-color : #FFF;
+}
 .bouton{ /* pour les bouton */
 	margin-top : 10px;
 	background-color : #FFF;
@@ -222,6 +225,63 @@ h1{
 	margin-left : auto;
 	margin-right : auto;
 	margin-top : 100px;
+}
+.verif_ligne{
+	padding : 5px;
+}
+.verif_ligne_info{
+	float : right;
+}
+.verif_ligne_impair{
+	background-color : #EFEFEF;
+}
+.verif_btn_vert{
+	background-color : #FFF;
+	border : 1px solid #2ecc71;
+	padding : 5px;
+	color : #2ecc71;
+	border-radius : 5px;
+	font-size : 19px;
+	font-family : 'Source Sans Pro', sans-serif;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+.verif_btn_vert:hover{ /* s'active quand on passe le curseur sur le bouton */
+	background-color : #2ecc71;
+	color : #FFF;
+	transition : 250ms;
+}
+.verif_btn_jaune{
+	background-color : #FFF;
+	border : 1px solid #f1c40f;
+	padding : 5px;
+	color : #f1c40f;
+	border-radius : 5px;
+	font-size : 19px;
+	font-family : 'Source Sans Pro', sans-serif;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+.verif_btn_jaune:hover{ /* s'active quand on passe le curseur sur le bouton */
+	background-color : #f1c40f;
+	color : #FFF;
+	transition : 250ms;
+}
+.verif_btn_rouge{
+	background-color : #FFF;
+	border : 1px solid #e74c3c;
+	padding : 5px;
+	color : #e74c3c;
+	border-radius : 5px;
+	font-size : 19px;
+	font-family : 'Source Sans Pro', sans-serif;
+	margin-top : 5px;
+	margin-bottom : 5px;
+}
+.verif_btn_rouge:hover{ /* s'active quand on passe le curseur sur le bouton */
+	background-color : #e74c3c;
+	color : #FFF;
+	transition : 250ms;
 }
 
 @font-face { /* paramètrage de la police d'écriture (weight 300) */

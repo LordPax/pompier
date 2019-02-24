@@ -22,6 +22,7 @@
 	</head>
 	<body>
 		<!-- utilisation d'une autre page pour afficher le titre de la page -->
+		<?php include('../include/popupVerif.php');?>
 		<?php include('../include/header.php');?>
 		<section>
 			<div class = "dimension">
@@ -29,12 +30,26 @@
 					<div class = "fen_titre">Vérification</div>
 					<div style = "padding : 10px;">
 						<div class = "verif_mat"></div>
+						<div class = "verif_mat2">
+							<?php
+								$materiel = $bdd->query('SELECT * FROM materiel WHERE idMat = 1');
+								$infoMat = $materiel->fetch();
+
+								echo '
+									<div class = "verif">
+										<div class = "verif_ligne verif_ligne_impair">nom <div class = "verif_ligne_info">'.$infoMat['nom'].'</div></div>
+										<div class = "verif_ligne">vehicule <div class = "verif_ligne_info">'.$infoMat['vehicule'].'</div></div>
+										<div class = "verif_ligne verif_ligne_impair">localisation <div class = "verif_ligne_info">'.$infoMat['localisation'].'</div></div>
+										<div class = "verif_ligne">quantite <div class = "verif_ligne_info">'.$infoMat['qte'].'</div></div>
+									</div>
+								';
+							?>
+						</div>
 						<input type = "hidden" class = "idUser" value = <?php echo '"'.$_SESSION['id'].'"'?>>
-						<input type = "hidden" class = "idVehicule" value = "1">
-						<button id = "verif_btn" class = "bouton2">Valider</button>
-						<!--<form id = "verif_btn">
-							<input type="submit" name="btn" class = "bouton2" value = "Valider">
-						</form>-->
+						<input type = "hidden" class = "idMat" value = "2">
+						<button id = "verif_btn" class = "verif_btn_vert">present</button>
+						<button id = "verif_btn1" class = "verif_btn_jaune">anomalie</button>
+						<button id = "verif_btn2" class = "verif_btn_rouge">absent</button>
 					</div>
 				</div>
 			</div>

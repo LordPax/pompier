@@ -22,6 +22,8 @@ SET time_zone = "+00:00";
 -- Base de données :  `pompier`
 --
 
+-- DROP TABLE IF EXISTS `vehicule`;
+
 -- --------------------------------------------------------
 
 --
@@ -123,7 +125,7 @@ INSERT INTO `user` (`idUser`, `nom`, `prenom`, `role`, `matricule`, `grade`, `nu
 
 CREATE OR REPLACE TABLE `verif` (
   `idVerif` int(11) NOT NULL,
-  `materiel` int(11) NOT NULL,
+  `idMatEtr` int(11) NOT NULL,
   `dateVerif` datetime NOT NULL,
   `equipeDeGarde` int(11) NOT NULL,
   `perosnnel1` int(11) NOT NULL,
@@ -137,11 +139,11 @@ CREATE OR REPLACE TABLE `verif` (
 
 
 --
--- Structure de la table `vehicule`
+-- Structure de la table `materiel`
 --
 
-CREATE OR REPLACE TABLE `vehicule` (
-  `idVehicule` int(11) NOT NULL,
+CREATE OR REPLACE TABLE `materiel` (
+  `idMat` int(11) NOT NULL,
   `vehicule` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `localisation` text NOT NULL,
   `qte` int(11) NOT NULL,
@@ -150,10 +152,15 @@ CREATE OR REPLACE TABLE `vehicule` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `vehicule`
+-- Déchargement des données de la table `materiel`
 --
 
-/*INSERT INTO `vehicule` (`idVehicule`, `vehicule`, `localisation`, `qte`, `descrip`, `nom`) VALUES
+INSERT INTO `materiel` (`idMat`, `vehicule`, `localisation`, `qte`, `descrip`, `nom`) VALUES 
+(1, 'joile camion rouge', 'place passager', '5', '', 'lampe torche'), 
+(2, 'ambulance', 'coffre', '1', '', 'défibrillateur'),
+(3, 'azea', 'ert', '3', '', 'ghfvhj');
+
+/*INSERT INTO `materiel` (`idMat`, `materiel`, `localisation`, `qte`, `descrip`, `nom`) VALUES
 (1, `lolololol`, `quelque part`, 5, 'super beau camion rouge', 'a'),
 (2, `aze`, `azeaz`, 5, 'azeaze', 'a'),
 (3, `azrtye`, `azeartz`, 5, 'azertyaze', 'a'),
@@ -193,16 +200,16 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`idUser`);
 
 --
--- Index pour la table `user`
+-- Index pour la table `verif`
 --
 ALTER TABLE `verif`
   ADD PRIMARY KEY (`idVerif`);
 
 --
--- Index pour la table `user`
+-- Index pour la table `materiel`
 --
-ALTER TABLE `vehicule`
-  ADD PRIMARY KEY (`idVehicule`);
+ALTER TABLE `materiel`
+  ADD PRIMARY KEY (`idMat`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -243,8 +250,8 @@ ALTER TABLE `verif`
 -- AUTO_INCREMENT pour la table `materiel`
 --
 
-ALTER TABLE `vehicule`
-  MODIFY `idVehicule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `materiel`
+  MODIFY `idMat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 COMMIT;
 
