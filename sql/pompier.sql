@@ -160,13 +160,6 @@ INSERT INTO `materiel` (`idMat`, `vehicule`, `localisation`, `qte`, `descrip`, `
 (2, 'ambulance', 'coffre', '1', '', 'défibrillateur'),
 (3, 'azea', 'ert', '3', '', 'ghfvhj');
 
-/*INSERT INTO `materiel` (`idMat`, `materiel`, `localisation`, `qte`, `descrip`, `nom`) VALUES
-(1, `lolololol`, `quelque part`, 5, 'super beau camion rouge', 'a'),
-(2, `aze`, `azeaz`, 5, 'azeaze', 'a'),
-(3, `azrtye`, `azeartz`, 5, 'azertyaze', 'a'),
-(4, `asdfe`, `azesdfaz`, 5, 'azesdfaze', 'a');*/
-
-
 --
 -- Index pour les tables déchargées
 --

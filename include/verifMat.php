@@ -1,14 +1,14 @@
 <?php
 	include('bdd.php');
 	session_start();
-	if (isset($_SESSION['id']) && isset($_POST['idUser']) && !empty($_SESSION['id']) && !empty($_POST['idUser']) && $_SESSION['id'] == $_POST['idUser']) {
+	if (isset($_SESSION['id']) && isset($_POST['idUser']) && !empty($_SESSION['id']) && !empty($_POST['idUser']) && $_SESSION['id'] == $_POST['idUser']) { // verification de l'authenticité de l'utilisateur
 		
-		if (isset($_POST['idMat'])  && !empty($_POST['idMat']) && $_POST['idMat'] > 0){
-			$idMat = $_POST['idMat'];
+		if (isset($_POST['idMat'])  && !empty($_POST['idMat']) && $_POST['idMat'] > 0){ // vérification des valeur envoyé
+			$idMat = $_POST['idMat']; // id du matériel
 			$materiel2 = $bdd->query('SELECT * FROM materiel');
-			$countMat = $materiel2->rowCount();
+			$countMat = $materiel2->rowCount(); // compte le nombre de tuple (ligne) concernant le matériel
 
-			if ($idMat > $countMat)
+			if ($idMat > $countMat) // pour éviter de dépasser le nombre max
 				$idMat = $countMat;
 
 			$materiel = $bdd->prepare('SELECT * FROM materiel WHERE idMat = ?');
